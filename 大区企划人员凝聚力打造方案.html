@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>大区企划人员凝聚力打造方案 V2.0</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy:       #1F4E79;
+  --blue:       #2E75B6;
+  --blue-light: #D6E4F0;
+  --orange:     #C55A11;
+  --orange-bg:  #FCE4D6;
+  --green:      #375623;
+  --green-bg:   #E2EFDA;
+  --red:        #C00000;
+  --red-bg:     #FFE4E4;
+  --gold:       #B8860B;
+  --bg:         #F7F9FC;
+  --bg2:        #EEF3F9;
+  --white:      #FFFFFF;
+  --text:       #1A1A2E;
+  --text-mid:   #444;
+  --text-light: #777;
+  --border:     #C8D8EC;
+  --shadow:     0 4px 24px rgba(31,78,121,.10);
+  --shadow-lg:  0 12px 48px rgba(31,78,121,.15);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; font-size: 16px; }
+
+body {
+  font-family: 'Noto Sans SC', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.75;
+}
+
+/* ── SIDEBAR NAV ─────────────────────────────────────────── */
+.sidenav {
+  position: fixed; left: 0; top: 0; bottom: 0;
+  width: 220px;
+  background: var(--navy);
+  padding: 0;
+  z-index: 100;
+  display: flex; flex-direction: column;
+  overflow-y: auto;
+}
+.sidenav-logo {
+  padding: 28px 20px 20px;
+  border-bottom: 1px solid rgba(255,255,255,.12);
+}
+.sidenav-logo .company {
+  font-size: .7rem; color: rgba(255,255,255,.5); letter-spacing: .12em;
+  text-transform: uppercase; margin-bottom: 4px;
+}
+.sidenav-logo .doc-title {
+  font-family: 'Noto Serif SC', serif;
+  font-size: .95rem; font-weight: 700; color: #fff; line-height: 1.4;
+}
+.sidenav-logo .version {
+  margin-top: 8px;
+  display: inline-block; padding: 2px 10px;
+  background: var(--orange); border-radius: 20px;
+  font-size: .68rem; color: #fff; font-weight: 600; letter-spacing: .05em;
+}
+.nav-links { padding: 16px 0; flex: 1; }
+.nav-section { padding: 8px 20px 4px; font-size: .65rem; color: rgba(255,255,255,.35); letter-spacing: .1em; text-transform: uppercase; }
+.nav-links a {
+  display: flex; align-items: center; gap: 10px;
+  padding: 9px 20px;
+  color: rgba(255,255,255,.7);
+  text-decoration: none; font-size: .8rem;
+  transition: all .2s; border-left: 3px solid transparent;
+}
+.nav-links a:hover, .nav-links a.active {
+  color: #fff; background: rgba(255,255,255,.08); border-left-color: var(--gold);
+}
+.nav-links a .nav-num {
+  width: 20px; height: 20px; border-radius: 50%;
+  background: rgba(255,255,255,.12);
+  display: flex; align-items: center; justify-content: center;
+  font-size: .65rem; font-weight: 700; flex-shrink: 0;
+}
+.nav-links a.urgent .nav-num { background: var(--red); }
+.sidenav-footer {
+  padding: 16px 20px;
+  border-top: 1px solid rgba(255,255,255,.1);
+  font-size: .68rem; color: rgba(255,255,255,.35);
+  line-height: 1.6;
+}
+
+/* ── MAIN CONTENT ────────────────────────────────────────── */
+.main {
+  margin-left: 220px;
+  min-height: 100vh;
+}
+
+/* ── HERO ────────────────────────────────────────────────── */
+.hero {
+  background: linear-gradient(135deg, var(--navy) 0%, #173B5E 60%, #0D2840 100%);
+  position: relative; overflow: hidden;
+  padding: 80px 60px 70px;
+}
+.hero::before {
+  content: '';
+  position: absolute; top: -60px; right: -60px;
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, rgba(46,117,182,.35) 0%, transparent 70%);
+  pointer-events: none;
+}
+.hero::after {
+  content: '';
+  position: absolute; bottom: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, var(--orange) 0%, var(--gold) 50%, var(--blue) 100%);
+}
+.hero-eyebrow {
+  font-size: .72rem; letter-spacing: .18em; text-transform: uppercase;
+  color: rgba(255,255,255,.45); margin-bottom: 16px;
+}
+.hero-title {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 2.8rem; font-weight: 900; color: #fff;
+  line-height: 1.2; margin-bottom: 12px;
+}
+.hero-title span { color: #6DB3F2; }
+.hero-sub {
+  font-size: .95rem; color: rgba(255,255,255,.6);
+  font-style: italic; margin-bottom: 40px;
+}
+.hero-meta {
+  display: flex; gap: 24px; flex-wrap: wrap;
+}
+.meta-item {
+  background: rgba(255,255,255,.07);
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 8px; padding: 10px 18px;
+}
+.meta-item .label { font-size: .65rem; color: rgba(255,255,255,.4); letter-spacing: .08em; text-transform: uppercase; }
+.meta-item .value { font-size: .85rem; color: #fff; font-weight: 600; margin-top: 2px; }
+
+/* ── SECTION LAYOUT ──────────────────────────────────────── */
+.content { padding: 0 60px 80px; max-width: 960px; }
+
+.section { padding-top: 64px; }
+
+.section-header {
+  display: flex; align-items: flex-start; gap: 20px;
+  margin-bottom: 32px; padding-bottom: 20px;
+  border-bottom: 2px solid var(--border);
+}
+.section-num {
+  flex-shrink: 0;
+  width: 48px; height: 48px; border-radius: 12px;
+  background: var(--navy); color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.3rem; font-weight: 700;
+  box-shadow: 0 4px 12px rgba(31,78,121,.3);
+}
+.section-num.orange { background: var(--orange); }
+.section-num.red    { background: var(--red); }
+.section-num.green  { background: var(--green); }
+.section-num.gold   { background: var(--gold); }
+
+.section-title-wrap .section-title {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 1.5rem; font-weight: 700; color: var(--navy); line-height: 1.3;
+}
+.section-title-wrap .section-desc {
+  font-size: .82rem; color: var(--text-light); margin-top: 4px;
+}
+
+.subsection { margin-top: 36px; }
+.subsection-title {
+  font-size: 1.05rem; font-weight: 700; color: var(--blue);
+  margin-bottom: 16px; padding-left: 12px;
+  border-left: 4px solid var(--blue);
+}
+
+/* ── TABLES ──────────────────────────────────────────────── */
+.table-wrap { overflow-x: auto; margin: 16px 0 24px; border-radius: 10px; box-shadow: var(--shadow); }
+table {
+  width: 100%; border-collapse: collapse;
+  font-size: .82rem; background: var(--white);
+}
+thead tr th {
+  background: var(--navy); color: #fff;
+  padding: 11px 14px; text-align: left;
+  font-weight: 600; font-size: .78rem; letter-spacing: .03em;
+}
+thead tr th:first-child { border-radius: 10px 0 0 0; }
+thead tr th:last-child  { border-radius: 0 10px 0 0; }
+tbody tr td {
+  padding: 10px 14px; border-bottom: 1px solid var(--border);
+  vertical-align: top; line-height: 1.55;
+}
+tbody tr:last-child td { border-bottom: none; }
+tbody tr:nth-child(even) td { background: var(--bg); }
+tbody tr:hover td { background: var(--blue-light); transition: background .15s; }
+
+.tag {
+  display: inline-block; padding: 2px 10px; border-radius: 20px;
+  font-size: .72rem; font-weight: 600; white-space: nowrap;
+}
+.tag-orange { background: var(--orange-bg); color: var(--orange); }
+.tag-red    { background: var(--red-bg);    color: var(--red); }
+.tag-green  { background: var(--green-bg);  color: var(--green); }
+.tag-blue   { background: var(--blue-light);color: var(--navy); }
+.tag-gold   { background: #FFF8DC; color: var(--gold); }
+
+/* ── PRIORITY CARDS ──────────────────────────────────────── */
+.priority-grid {
+  display: grid; grid-template-columns: repeat(4,1fr); gap: 16px; margin: 20px 0 32px;
+}
+.priority-card {
+  border-radius: 12px; padding: 20px 18px;
+  position: relative; overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--white); box-shadow: var(--shadow);
+  transition: transform .2s, box-shadow .2s;
+}
+.priority-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
+.priority-card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px;
+}
+.card-blue::before   { background: var(--blue); }
+.card-orange::before { background: var(--orange); }
+.card-green::before  { background: var(--green); }
+.card-red::before    { background: var(--red); }
+
+.card-icon { font-size: 1.6rem; margin-bottom: 10px; }
+.card-label { font-size: .68rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--text-light); margin-bottom: 4px; }
+.card-title { font-size: .95rem; font-weight: 700; color: var(--navy); margin-bottom: 8px; line-height: 1.3; }
+.card-arrow { font-size: .75rem; color: var(--text-light); }
+.card-action {
+  margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--border);
+  font-size: .75rem; font-weight: 700; color: inherit;
+}
+.card-blue   .card-action { color: var(--blue); }
+.card-orange .card-action { color: var(--orange); }
+.card-green  .card-action { color: var(--green); }
+.card-red    .card-action { color: var(--red); }
+
+/* ── INFOBOX ─────────────────────────────────────────────── */
+.infobox {
+  border-radius: 10px; padding: 16px 20px; margin: 16px 0 24px;
+  display: flex; gap: 14px; align-items: flex-start;
+  font-size: .84rem; line-height: 1.65;
+}
+.infobox-blue   { background: var(--blue-light);  border-left: 4px solid var(--blue); }
+.infobox-orange { background: var(--orange-bg);   border-left: 4px solid var(--orange); }
+.infobox-red    { background: var(--red-bg);       border-left: 4px solid var(--red); }
+.infobox-green  { background: var(--green-bg);     border-left: 4px solid var(--green); }
+.infobox-navy   { background: var(--navy); color: rgba(255,255,255,.9); border-left: 4px solid var(--gold); }
+.infobox-icon   { font-size: 1.2rem; flex-shrink: 0; margin-top: 2px; }
+.infobox strong { font-weight: 700; }
+
+/* ── SOP CARDS ───────────────────────────────────────────── */
+.sop-block {
+  border-radius: 12px; overflow: hidden;
+  margin: 16px 0 24px; box-shadow: var(--shadow);
+}
+.sop-header {
+  padding: 12px 20px;
+  font-size: .78rem; font-weight: 700; letter-spacing: .08em;
+  text-transform: uppercase; color: #fff;
+}
+.sop-header.blue   { background: var(--blue); }
+.sop-header.orange { background: var(--orange); }
+.sop-header.green  { background: var(--green); }
+.sop-header.red    { background: var(--red); }
+
+.sop-steps { background: var(--white); }
+.sop-step {
+  display: flex; gap: 16px; padding: 18px 20px;
+  border-bottom: 1px solid var(--border);
+  transition: background .15s;
+}
+.sop-step:last-child { border-bottom: none; }
+.sop-step:hover { background: var(--bg); }
+.step-num {
+  flex-shrink: 0; width: 30px; height: 30px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: .78rem; font-weight: 800; color: #fff; margin-top: 2px;
+}
+.step-num.blue   { background: var(--blue); }
+.step-num.orange { background: var(--orange); }
+.step-num.green  { background: var(--green); }
+.step-num.red    { background: var(--red); }
+
+.step-content .step-title {
+  font-weight: 700; font-size: .88rem; color: var(--navy); margin-bottom: 4px;
+}
+.step-content .step-body { font-size: .82rem; color: var(--text-mid); line-height: 1.65; }
+
+/* ── BULLET LIST ─────────────────────────────────────────── */
+.bullet-list { list-style: none; margin: 12px 0 24px; }
+.bullet-list li {
+  padding: 7px 0 7px 24px; position: relative;
+  font-size: .84rem; color: var(--text-mid); border-bottom: 1px solid rgba(0,0,0,.04);
+}
+.bullet-list li::before {
+  content: ''; position: absolute; left: 0; top: 15px;
+  width: 8px; height: 8px; border-radius: 50%;
+  background: var(--blue);
+}
+.bullet-list.orange li::before { background: var(--orange); }
+.bullet-list.red    li::before { background: var(--red); }
+
+/* ── CALENDAR TABLE ──────────────────────────────────────── */
+.calendar-table thead tr th { background: #0D2840; }
+.cal-new   { background: #FFF0F0 !important; }
+.cal-month { background: var(--blue-light) !important; }
+.cal-qtr   { background: var(--orange-bg) !important; }
+.cal-total { background: var(--navy) !important; color: #fff; font-weight: 700; }
+.cal-total td { color: #fff !important; border-bottom: none !important; }
+
+/* ── PRIORITY TABLE ──────────────────────────────────────── */
+.p-tag {
+  display: inline-block; padding: 3px 12px; border-radius: 20px;
+  font-size: .72rem; font-weight: 800;
+}
+.p1 { background: var(--orange-bg); color: var(--orange); }
+.p2 { background: var(--blue-light); color: var(--navy); }
+.p3 { background: var(--green-bg); color: var(--green); }
+
+/* ── KPI TABLE ───────────────────────────────────────────── */
+.kpi-good  td:nth-child(3) { color: var(--green);  font-weight: 700; }
+.kpi-blue  td:nth-child(3) { color: var(--blue);   font-weight: 700; }
+.kpi-red   td:nth-child(3) { color: var(--red);    font-weight: 700; }
+.kpi-orange td:nth-child(3){ color: var(--orange); font-weight: 700; }
+
+/* ── CLOSING ─────────────────────────────────────────────── */
+.closing {
+  margin: 64px 0 0;
+  background: linear-gradient(135deg, var(--navy) 0%, #173B5E 100%);
+  border-radius: 16px; padding: 48px 52px;
+  position: relative; overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+.closing::before {
+  content: '';
+  position: absolute; bottom: -40px; right: -40px;
+  width: 220px; height: 220px;
+  background: radial-gradient(circle, rgba(184,134,11,.25) 0%, transparent 70%);
+}
+.closing-label {
+  font-size: .68rem; letter-spacing: .18em; text-transform: uppercase;
+  color: rgba(255,255,255,.4); margin-bottom: 12px;
+}
+.closing-main {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 1.4rem; font-weight: 700; color: #fff; line-height: 1.6;
+  margin-bottom: 16px;
+}
+.closing-sub {
+  font-size: .88rem; color: rgba(255,255,255,.65); line-height: 1.8;
+}
+.closing-sub em { color: rgba(255,255,255,.45); font-style: italic; }
+
+/* ── DIAGNOSIS GRID ──────────────────────────────────────── */
+.diag-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 20px 0;
+}
+.diag-card {
+  border-radius: 10px; padding: 18px 20px;
+  border: 1px solid var(--border);
+  background: var(--white); box-shadow: var(--shadow);
+}
+.diag-card .diag-label {
+  font-size: .68rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+  margin-bottom: 8px; padding: 3px 10px; border-radius: 20px; display: inline-block;
+}
+.diag-card h4 { font-size: .9rem; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+.diag-card p  { font-size: .8rem; color: var(--text-mid); line-height: 1.6; }
+.diag-blue   .diag-label { background: var(--blue-light);  color: var(--navy); }
+.diag-orange .diag-label { background: var(--orange-bg);   color: var(--orange); }
+.diag-green  .diag-label { background: var(--green-bg);    color: var(--green); }
+.diag-red    .diag-label { background: var(--red-bg);      color: var(--red); }
+
+/* ── ANIMATE ─────────────────────────────────────────────── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.hero > * { animation: fadeUp .6s ease both; }
+.hero-eyebrow { animation-delay: .05s; }
+.hero-title   { animation-delay: .12s; }
+.hero-sub     { animation-delay: .18s; }
+.hero-meta    { animation-delay: .24s; }
+
+/* ── SCROLLBAR ───────────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg2); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+
+/* ── RESPONSIVE ──────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .sidenav { display: none; }
+  .main { margin-left: 0; }
+  .hero { padding: 48px 28px; }
+  .content { padding: 0 28px 60px; }
+  .priority-grid { grid-template-columns: 1fr 1fr; }
+  .diag-grid { grid-template-columns: 1fr; }
+  .hero-title { font-size: 2rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- ── SIDEBAR ─────────────────────────────────────────────── -->
+<nav class="sidenav">
+  <div class="sidenav-logo">
+    <div class="company">恒太商业管理集团</div>
+    <div class="doc-title">大区企划人员<br>凝聚力打造方案</div>
+    <div class="version">V2.0 · 2026年4月</div>
+  </div>
+  <div class="nav-links">
+    <div class="nav-section">方案导航</div>
+    <a href="#sec1"><span class="nav-num">一</span>背景与问题诊断</a>
+    <a href="#sec2"><span class="nav-num">二</span>总体思路</a>
+    <a href="#sec3"><span class="nav-num">三</span>核心四件事</a>
+    <a href="#sec3-0" style="padding-left:36px; font-size:.75rem;">
+      <span class="nav-num urgent">0</span>岗责解读沟通
+    </a>
+    <a href="#sec3-1" style="padding-left:36px; font-size:.75rem;"><span class="nav-num">1</span>月度企划战报</a>
+    <a href="#sec3-2" style="padding-left:36px; font-size:.75rem;"><span class="nav-num">2</span>企划之星评选</a>
+    <a href="#sec3-3" style="padding-left:36px; font-size:.75rem;"><span class="nav-num">3</span>季度1对1关怀</a>
+    <a href="#sec4"><span class="nav-num">四</span>执行日历</a>
+    <a href="#sec5"><span class="nav-num">五</span>备选事项</a>
+    <a href="#sec6"><span class="nav-num">六</span>预期效果</a>
+  </div>
+  <div class="sidenav-footer">
+    拟制：业务综管中心企划部<br>
+    结合岗责升级与3名<br>企划经理离职情况优化
+  </div>
+</nav>
+
+<!-- ── MAIN ────────────────────────────────────────────────── -->
+<main class="main">
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-eyebrow">恒太商业管理集团 · 大区企划管理</div>
+    <h1 class="hero-title">大区企划人员<br><span>凝聚力打造方案</span></h1>
+    <div class="hero-sub">结合2026年岗责重梳与3名企划经理离职情况——专项优化版</div>
+    <div class="hero-meta">
+      <div class="meta-item"><div class="label">版本</div><div class="value">V2.0</div></div>
+      <div class="meta-item"><div class="label">日期</div><div class="value">2026年4月</div></div>
+      <div class="meta-item"><div class="label">适用范围</div><div class="value">各大区企划团队</div></div>
+      <div class="meta-item"><div class="label">月均执行时间</div><div class="value">约 3–4 小时</div></div>
+    </div>
+  </header>
+
+  <div class="content">
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- 一、背景与问题诊断 -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <section class="section" id="sec1">
+    <div class="section-header">
+      <div class="section-num">一</div>
+      <div class="section-title-wrap">
+        <div class="section-title">背景与问题诊断（升级版）</div>
+        <div class="section-desc">结合3名离职经理的真实案例与2026年岗责升级的新压力，进行深化诊断</div>
+      </div>
+    </div>
+
+    <div class="subsection" id="sec1-1">
+      <div class="subsection-title">1.1 &nbsp;3名企划经理离职情况分析</div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr>
+            <th>门店</th><th>姓名</th><th>评级</th><th>离职根因</th><th>直接诱因</th><th>核心管理启示</th>
+          </tr></thead>
+          <tbody>
+            <tr>
+              <td>固始项目</td>
+              <td>富源</td>
+              <td><span class="tag tag-blue">良好</span></td>
+              <td><span class="tag tag-orange">薪资原因</span></td>
+              <td>家庭压力大，更看重薪资，频繁跳槽</td>
+              <td>薪资竞争力不足；需用归属感、荣誉感、成长空间等非薪资因素建立留任黏性</td>
+            </tr>
+            <tr style="background:#FFF8F8;">
+              <td><strong>寿县项目</strong></td>
+              <td><strong>廖若晨</strong></td>
+              <td><span class="tag tag-red">优秀</span></td>
+              <td><span class="tag tag-red">个人原因</span></td>
+              <td>找了云南女友，个人生活方向改变</td>
+              <td>优秀人才因个人因素流失，凝聚力建设须趁早——有了深度归属感，即便有个人因素，离职决定也会更慎重</td>
+            </tr>
+            <tr>
+              <td>芜湖项目</td>
+              <td>丛聪</td>
+              <td><span class="tag tag-blue">良好</span></td>
+              <td><span class="tag tag-gold">上级关系</span></td>
+              <td>与店总沟通存在问题，双方不理解、难配合</td>
+              <td>上级关系破裂是可干预的管理原因，需在1对1沟通中专门设问，早发现、早介入</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="infobox infobox-orange">
+        <div class="infobox-icon">💡</div>
+        <div><strong>关键结论：</strong>3个案例呈现3种根因——薪资、个人、管理关系。方案重点：用归属感和荣誉感对抗薪资吸引（抗富源类）；趁早建立情感连接（抗廖若晨类）；在关怀沟通中专设上级关系问题，提前识别和介入（抗丛聪类）。</div>
+      </div>
+    </div>
+
+    <div class="subsection">
+      <div class="subsection-title">1.2 &nbsp;2026年岗责重梳带来的新压力</div>
+      <p style="font-size:.84rem;color:var(--text-mid);margin-bottom:16px;">门店企划部岗位从过去笼统的「用户运营岗」升级为<strong>8个专业岗位</strong>（活动、视觉设计、线上运营、用户运营、媒体、视频、直播、社群），对现有人员形成三重新压力：</p>
+      <div class="diag-grid">
+        <div class="diag-card diag-orange">
+          <div class="diag-label">能力焦虑</div>
+          <h4>对照新标准发现自身有差距</h4>
+          <p>担心被淘汰，不安全感上升，离职意愿增加。岗责越细化，焦虑感越具体。</p>
+        </div>
+        <div class="diag-card diag-blue">
+          <div class="diag-label">角色模糊</div>
+          <h4>多人并存时职责边界不清</h4>
+          <p>易产生推诿或内耗，团队协作摩擦增加，人际关系紧张。</p>
+        </div>
+        <div class="diag-card diag-green">
+          <div class="diag-label">成长迷茫</div>
+          <h4>新岗位晋升路径尚未公示</h4>
+          <p>努力方向不明，优秀员工看不到未来，倾向向外探索机会。</p>
+        </div>
+        <div class="diag-card diag-red">
+          <div class="diag-label">综合风险</div>
+          <h4>三重压力叠加，离职概率上升</h4>
+          <p>岗责升级恰好与当前任务压力重叠，是今年离职潮的重要隐性推手。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="subsection">
+      <div class="subsection-title">1.3 &nbsp;综合问题诊断</div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>问题层面</th><th>原版诊断</th><th>新增诊断（本次优化）</th><th>核心应对方向</th></tr></thead>
+          <tbody>
+            <tr><td><span class="tag tag-orange">工作层</span></td><td>任务重、目标高</td><td>岗责升级带来能力焦虑与角色模糊</td><td>岗责解读沟通 + 工具赋能，降低焦虑</td></tr>
+            <tr><td><span class="tag tag-green">成长层</span></td><td>晋升通道不清晰</td><td>新8岗体系下成长路径亟需明确</td><td>发布新岗位成长地图（升为优先事项）</td></tr>
+            <tr><td><span class="tag tag-blue">关系层</span></td><td>孤立感，缺横向连接</td><td>丛聪案例：上级关系破裂是可干预的离职原因</td><td>1对1沟通专设上级关系问题，提前识别介入</td></tr>
+            <tr><td><span class="tag tag-red">归属层</span></td><td>无荣誉感出口</td><td>廖若晨案例：优秀人才流失，归属感需前置建设</td><td>企划之星 + 战报，尽早建立情感连接和荣誉感</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- 二、总体思路 -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <section class="section" id="sec2">
+    <div class="section-header">
+      <div class="section-num orange">二</div>
+      <div class="section-title-wrap">
+        <div class="section-title">总体思路</div>
+        <div class="section-desc">大区企划1人执行，聚焦少做、做对、见效快</div>
+      </div>
+    </div>
+
+    <div class="infobox infobox-navy">
+      <div class="infobox-icon">🎯</div>
+      <div><strong>核心原则：</strong>在原有核心三件事基础上，新增一项前置动作——「岗责解读沟通」，帮助人员消除能力焦虑，稳住当前心态。全部事项月均投入约4小时，可持续执行。</div>
+    </div>
+
+    <div class="priority-grid">
+      <div class="priority-card card-blue">
+        <div class="card-icon">👁️</div>
+        <div class="card-label">留心</div>
+        <div class="card-title">让企划人被看见、被认可</div>
+        <div class="card-action">→ 月度企划战报</div>
+      </div>
+      <div class="priority-card card-orange">
+        <div class="card-icon">🏆</div>
+        <div class="card-label">留人</div>
+        <div class="card-title">让企划人有荣誉、有奔头</div>
+        <div class="card-action">→ 企划之星评选</div>
+      </div>
+      <div class="priority-card card-green">
+        <div class="card-icon">🤝</div>
+        <div class="card-label">留力</div>
+        <div class="card-title">让企划人有连接、不孤单</div>
+        <div class="card-action">→ 季度1对1关怀</div>
+      </div>
+      <div class="priority-card card-red">
+        <div class="card-icon">🧭</div>
+        <div class="card-label">留根（新增）</div>
+        <div class="card-title">让企划人知方向、不迷茫</div>
+        <div class="card-action">→ 岗责解读沟通</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- 三、核心四件事 -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <section class="section" id="sec3">
+    <div class="section-header">
+      <div class="section-num red">三</div>
+      <div class="section-title-wrap">
+        <div class="section-title">核心四件事（优先落地）</div>
+        <div class="section-desc">在原有三件事基础上，新增「岗责解读沟通」作为第0件事，需最先完成</div>
+      </div>
+    </div>
+
+    <!-- 第0件事 -->
+    <div class="subsection" id="sec3-0">
+      <div class="subsection-title" style="border-color:var(--red);color:var(--red);">【新增】第0件事：岗责解读沟通（一次性前置动作）</div>
+      <div style="display:flex;gap:24px;margin-bottom:16px;flex-wrap:wrap;">
+        <div class="infobox infobox-red" style="flex:1;min-width:200px;margin:0;">
+          <div class="infobox-icon">🎯</div>
+          <div><strong>目标：</strong>消除能力焦虑，明确方向</div>
+        </div>
+        <div class="infobox infobox-red" style="flex:1;min-width:200px;margin:0;">
+          <div class="infobox-icon">⏱️</div>
+          <div><strong>投入：</strong>一次性，约3-4小时（含准备+沟通）</div>
+        </div>
+      </div>
+      <div class="infobox infobox-orange">
+        <div class="infobox-icon">⚠️</div>
+        <div><strong>背景：</strong>2026年岗责从1个泛化岗升级为8个专业岗，现有人员面对新要求，如果没有人主动解读，极易形成「我是不是干不了」「要求这么高，跳槽算了」的心理，成为离职的隐性推手。岗责解读沟通的核心是把新岗责从压力转变为方向。</div>
+      </div>
+      <div class="sop-block">
+        <div class="sop-header red">SOP 流程</div>
+        <div class="sop-steps">
+          <div class="sop-step">
+            <div class="step-num red">1</div>
+            <div class="step-content">
+              <div class="step-title">准备解读材料（约1小时）</div>
+              <div class="step-body">针对该门店岗位，将岗责说明整理为一页简明版：①本岗位核心职责3条以内 ②考核核心指标 ③集团对该岗位的成长期待 ④当前阶段重点能力要求。<strong>不要直接发原版岗责文件</strong>，原版太长、太正式，会加重焦虑。</div>
+            </div>
+          </div>
+          <div class="sop-step">
+            <div class="step-num red">2</div>
+            <div class="step-content">
+              <div class="step-title">主动发起沟通（约10分钟/人）</div>
+              <div class="step-body">以非正式语气通知：「XXX，2026年岗位职责做了些调整，我整理了一份简单说明，想跟你聊10分钟，一起看看，主要是想让你心里有数，知道今年主要做什么、往哪个方向发展。」</div>
+            </div>
+          </div>
+          <div class="sop-step">
+            <div class="step-num red">3</div>
+            <div class="step-content">
+              <div class="step-title">沟通核心动作（约20分钟/人）</div>
+              <div class="step-body">重点传递三个信息：①岗责是帮你明确方向，不是考你；②你现在做的事情已经覆盖了哪些核心要求（找亮点，给信心）；③今年最重要的1-2个能力突破点是什么，大区可以给什么支持。</div>
+            </div>
+          </div>
+          <div class="sop-step">
+            <div class="step-num red">4</div>
+            <div class="step-content">
+              <div class="step-title">收集反馈并汇总（约5分钟/人）</div>
+              <div class="step-body">问两个问题：①看完岗责，有没有什么担心或困惑？②有没有觉得某个要求特别难达到？收集后汇总给集团企划中心，为后续培训计划提供输入。</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <ul class="bullet-list red">
+        <li>沟通核心目的是减压，语气要轻松，避免变成述职或考核</li>
+        <li>对有离职倾向的门店，本次沟通同步了解现状，酌情向大区负责人反馈</li>
+        <li><strong>建议4月内完成，越早越好</strong>，不要等人员情绪积累后再做</li>
+      </ul>
+    </div>
+
+    <!-- 事项一 -->
+    <div class="subsection" id="sec3-1">
+      <div class="subsection-title">事项一：月度企划战报</div>
+      <div style="display:flex;gap:16px;margin-bottom:16px;flex-wrap:wrap;">
+        <div class="infobox infobox-blue" style="flex:1;min-width:200px;margin:0;">
+          <div class="infobox-icon">🎯</div>
+          <div><strong>目标：</strong>让每个门店企划的工作被看见，建立全大区数据透明氛围</div>
+        </div>
+        <div class="infobox infobox-blue" style="flex:1;min-width:200px;margin:0;">
+          <div class="infobox-icon">⏱️</div>
+          <div><strong>投入：</strong>每月约2小时 ｜ <em>新增：岗位成长亮点板块</em></div>
+        </div>
+      </div>
+      <div class="sop-block">
+        <div class="sop-header blue">SOP 流程</div>
+        <div class="sop-steps">
+          <div class="sop-step">
+            <div class="step-num blue">1</div>
+            <div class="step-content">
+              <div class="step-title">数据收集（每月25日，约30分钟）</div>
+              <div class="step-body">在大区企划群发固定格式消息，请各门店企划28日前回复：①本月线上销售额 ②最亮点活动1个（名称+结果）③自媒体最高互动帖截图 ④本月在新岗位要求上的1个突破或尝试（选填）。</div>
+            </div>
+          </div>
+          <div class="sop-step">
+            <div class="step-num blue">2</div>
+            <div class="step-content">
+              <div class="step-title">制作战报（每月28-29日，约1小时）</div>
+              <div class="step-body">内容固定<strong>五板块</strong>：各店线上销售排名 / 本月最佳活动案例 / 本月最佳内容 / <span style="color:var(--orange);font-weight:700;">岗位成长亮点（1-2条，体现新8岗能力实践）</span> / 大区一句话鼓励语。无需精美，清晰可读即可。</div>
+            </div>
+          </div>
+          <div class="sop-step">
+            <div class="step-num blue">3</div>
+            <div class="step-content">
+              <div class="step-title">发布（每月最后工作日，约10分钟）</div>
+              <div class="step-body">发至大区企划群，抄送大区负责人。对当月数据有明显提升的门店，单独私信一句鼓励。</div>
+            </div>
+          </div>
+          <div class="sop-step">
+            <div class="step-num blue">4</div>
+            <div class="step-content">
+              <div class="step-title">存档（5分钟）</div>
+              <div class="step-body">以「大区企划战报-YYYY-MM」命名存入共享文件夹，全年12期形成台账。</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="infobox infobox-orange">
+        <div class="infobox-icon">🔗</div>
+        <div><strong>与新情况的结合点：</strong>「岗位成长亮点」板块让新8岗体系与被认可正向绑定，人员感受到新岗责是成长机会而非考核压力。排名聚焦亮点，战报要做减压器，不做加压器。</div>
+      </div>
+    </div>
+
+    <!-- 事项二 -->
+    <div class="subsection" id="sec3-2">
+      <div class="subsection-title">事项二：企划之星月度评选</div>
+      <div style="display:flex;gap:16px;margin-bottom:16px;flex-wrap:wrap;">
+        <div class="infobox infobox-blue" style="flex:1;min-width:200px;margin:0;">
+          <div class="infobox-icon">🏆</div>
+          <div><strong>目标：</strong>给企划人员明确荣誉感，特别激励勇于探索新能力的人员</div>
+        </div>
+        <div class="infobox infobox-blue" style="flex:1;min-width:200px;margin:0;">
+          <div class="infobox-icon">⏱️</div>
+          <div><strong>投入：</strong>每月约40分钟 ｜ <em>新增：岗责升级探索奖 + 岗位名称标注</em></div>
+        </div>
+      </div>
+      <div class="sop-block">
+        <div class="sop-header orange">SOP 流程</div>
+        <div class="sop-steps">
+          <div class="sop-step">
+            <div class="step-num orange">1</div>
+            <div class="step-content">
+              <div class="step-title">提名（每月28日，约10分钟）</div>
+              <div class="step-body">评选标准（优先级）：①数据最亮眼 ②在新8岗体系下有创新尝试并出结果 ③在岗责升级适应期表现出色、带动团队 ④在困难情况下坚持完成任务。同一人原则上间隔3个月以上再选。</div>
+            </div>
+          </div>
+          <div class="sop-step">
+            <div class="step-num orange">2</div>
+            <div class="step-content">
+              <div class="step-title">制作荣誉卡（约20分钟）</div>
+              <div class="step-body">用Canva或微信模板制作简单图片卡，包含：本人姓名+所属门店 / 本月亮点一句话 / <span style="color:var(--orange);font-weight:700;">所属新岗位名称（如：媒体岗）</span> / 「恒太大区企划之星 YYYY年MM月」字样。</div>
+            </div>
+          </div>
+          <div class="sop-step">
+            <div class="step-num orange">3</div>
+            <div class="step-content">
+              <div class="step-title">发布与通知（约10分钟）</div>
+              <div class="step-body">在大区企划群发布，私信本人表达鼓励。每月将企划之星推送集团企划中心留痕。</div>
+            </div>
+          </div>
+          <div class="sop-step">
+            <div class="step-num orange">4</div>
+            <div class="step-content">
+              <div class="step-title">年度汇总</div>
+              <div class="step-body">年底将12位企划之星汇总「年度荣誉墙」图片发布，人人有留存，形成仪式感。</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="infobox infobox-orange">
+        <div class="infobox-icon">🔗</div>
+        <div><strong>与新情况的结合点：</strong>荣誉卡标注岗位名称让新8岗与荣誉感正向绑定；对薪资不满的人员（类富源），荣誉感和被看见是非薪资因素中最有效的留人补充；鼓励主动尝试新能力，传递「敢于探索也是好事」的信号。</div>
+      </div>
+    </div>
+
+    <!-- 事项三 -->
+    <div class="subsection" id="sec3-3">
+      <div class="subsection-title">事项三：季度1对1关怀沟通（升级版）</div>
+      <div style="display:flex;gap:16px;margin-bottom:16px;flex-wrap:wrap;">
+        <div class="infobox infobox-blue" style="flex:1;min-width:200px;margin:0;">
+          <div class="infobox-icon">🤝</div>
+          <div><strong>目标：</strong>早发现离职苗头，重点识别管理关系风险（类丛聪）和岗责适应压力</div>
+        </div>
+        <div class="infobox infobox-blue" style="flex:1;min-width:200px;margin:0;">
+          <div class="infobox-icon">⏱️</div>
+          <div><strong>投入：</strong>每季度约2-3小时 ｜ <em>新增：上级关系 + 岗责适应两类专项问题</em></div>
+        </div>
+      </div>
+      <div class="sop-block">
+        <div class="sop-header green">SOP 流程</div>
+        <div class="sop-steps">
+          <div class="sop-step">
+            <div class="step-num green">1</div>
+            <div class="step-content">
+              <div class="step-title">提前预约（季度第2个月中旬）</div>
+              <div class="step-body">私信各门店企划经理/主管：「XXX，最近工作状态怎么样？想找你聊聊，不是考核，就是想了解下你现在的感受，看有没有什么能帮上的。方便找半小时吗？」</div>
+            </div>
+          </div>
+          <div class="sop-step">
+            <div class="step-num green">2</div>
+            <div class="step-content">
+              <div class="step-title">沟通问题清单（30-40分钟/人）</div>
+              <div class="step-body">完整7问清单：<br>
+                ① 最近工作里哪件事让你最有成就感？<br>
+                ② 哪件事最费劲或最困惑？<br>
+                <span style="color:var(--orange);font-weight:700;">③ 新的岗位职责，哪些部分适应得还好，哪些压力比较大？【新增，针对岗责升级】</span><br>
+                <span style="color:var(--red);font-weight:700;">④ 和你直接上级的协作，有没有什么不顺畅的地方？【新增，识别丛聪类风险，重点问题】</span><br>
+                ⑤ 你对自己在恒太的发展有什么想法？<br>
+                ⑥ 现在最需要什么支持？<br>
+                ⑦ 有没有什么平时不方便说的话？</div>
+            </div>
+          </div>
+          <div class="sop-step">
+            <div class="step-num green">3</div>
+            <div class="step-content">
+              <div class="step-title">48小时内行动</div>
+              <div class="step-body">针对对方提到的1个困难给出1个实际回应。<strong style="color:var(--red);">特别注意：如对方提到与店总或上级有明显矛盾，48小时内同步大区负责人请管理层介入调解，不可拖延。</strong></div>
+            </div>
+          </div>
+          <div class="sop-step">
+            <div class="step-num green">4</div>
+            <div class="step-content">
+              <div class="step-title">简单记录（5分钟/人）</div>
+              <div class="step-body">记录：姓名 / 门店 / 沟通日期 / 主要诉求 / 岗责适应情况 / 上级关系风险（高/中/低）/ 跟进动作。高风险者立即报告大区负责人。</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="infobox infobox-orange">
+        <div class="infobox-icon">🔗</div>
+        <div><strong>与离职案例的结合点：</strong>第④问专门针对丛聪类风险，一旦发现立即升级处理；第③问了解岗责适应情况，提前给予支持；对廖若晨类优秀人员，了解其生活状态，如个人因素确实强烈，提前做好知识交接和人才补位准备。</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- 四、执行日历 -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <section class="section" id="sec4">
+    <div class="section-header">
+      <div class="section-num gold">四</div>
+      <div class="section-title-wrap">
+        <div class="section-title">执行日历</div>
+        <div class="section-desc">月均3-4小时，可持续执行</div>
+      </div>
+    </div>
+    <div class="table-wrap">
+      <table class="calendar-table">
+        <thead><tr><th>时间节点</th><th>所属事项</th><th>核心动作</th><th>耗时</th></tr></thead>
+        <tbody>
+          <tr class="cal-new">
+            <td><strong>4月内（立即启动）</strong></td>
+            <td><span class="tag tag-red">第0件事</span></td>
+            <td>岗责解读沟通：逐一沟通各门店企划经理/主管，消除岗责升级焦虑</td>
+            <td><strong>一次性<br>约3-4小时</strong></td>
+          </tr>
+          <tr class="cal-month">
+            <td>每月25日</td>
+            <td><span class="tag tag-blue">事项一</span></td>
+            <td>发数据收集消息至大区企划群</td>
+            <td>约30分钟</td>
+          </tr>
+          <tr class="cal-month">
+            <td>每月28-29日</td>
+            <td><span class="tag tag-blue">事项一+二</span></td>
+            <td>制作月度战报（含岗位成长亮点板块）+ 企划之星评选与荣誉卡</td>
+            <td>约1.5小时</td>
+          </tr>
+          <tr class="cal-month">
+            <td>每月最后工作日</td>
+            <td><span class="tag tag-blue">事项一+二</span></td>
+            <td>发布战报 + 企划之星公示 + 私信本人 + 存档</td>
+            <td>约20分钟</td>
+          </tr>
+          <tr class="cal-qtr">
+            <td>每季度第2个月中旬</td>
+            <td><span class="tag tag-orange">事项三</span></td>
+            <td>1对1关怀沟通，重点识别上级关系风险和岗责适应情况</td>
+            <td>约2-3小时</td>
+          </tr>
+          <tr class="cal-total">
+            <td>月均总投入</td>
+            <td>四件事合计</td>
+            <td>第0件事仅一次性；后续每月约3-4小时，可持续执行</td>
+            <td>约3-4小时/月</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- 五、备选事项 -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <section class="section" id="sec5">
+    <div class="section-header">
+      <div class="section-num green">五</div>
+      <div class="section-title-wrap">
+        <div class="section-title">备选事项（有余力时推进）</div>
+        <div class="section-desc">在核心四件事稳定运转后，按优先级择优推进</div>
+      </div>
+    </div>
+    <div class="infobox infobox-blue">
+      <div class="infobox-icon">📋</div>
+      <div><strong>推进节奏：</strong>P1事项建议第1个月启动；P2事项第2-3个月加入；P3事项有条件时择机推进，不强求。</div>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>优先级</th><th>事项名称</th><th>核心目标</th><th>具体内容</th><th>月均投入</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><span class="p-tag p1">P1</span></td>
+            <td><strong>新8岗成长路径发布</strong></td>
+            <td>消除成长迷茫，让有志者看到方向</td>
+            <td>结合新版岗责说明，梳理发布各岗位（活动/媒体/用户运营等）的晋升标准与时间参考。联合人资部门制定，一次性工作</td>
+            <td>一次性约3小时</td>
+          </tr>
+          <tr>
+            <td><span class="p-tag p1">P1</span></td>
+            <td><strong>大区企划连接群运营</strong></td>
+            <td>建立归属感与横向连接</td>
+            <td>建立大区企划微信/飞书群，每月发布1-2条有价值内容（行业案例、新岗位能力分享、集团政策解读）</td>
+            <td>约30分钟/月</td>
+          </tr>
+          <tr>
+            <td><span class="p-tag p1">P1</span></td>
+            <td><strong>岗责过渡期工具箱</strong></td>
+            <td>降低新岗位上手难度，减轻能力焦虑</td>
+            <td>针对新8个岗位各整理1份快速上手指南：核心工作清单、常用工具、参考案例、AI辅助工具使用说明。一次建立，长期复用</td>
+            <td>建立约4小时，维护1小时/季</td>
+          </tr>
+          <tr>
+            <td><span class="p-tag p2">P2</span></td>
+            <td><strong>月度线上共创会</strong></td>
+            <td>横向互学，新岗位能力互补</td>
+            <td>每月1次线上共创（60分钟），各门店企划轮流分享1个亮点案例；岗责升级初期聚焦「我在新岗位上摸索出的1个有效方法」</td>
+            <td>约1.5小时/月</td>
+          </tr>
+          <tr>
+            <td><span class="p-tag p2">P2</span></td>
+            <td><strong>师带徒计划</strong></td>
+            <td>稳住老人，加速新人成长</td>
+            <td>有经验企划人员与新人结对，大区企划发起并定期跟踪。岗责升级期优先在新8岗体系内配对，如老媒体主管带新媒体专员</td>
+            <td>约1小时/月</td>
+          </tr>
+          <tr>
+            <td><span class="p-tag p3">P3</span></td>
+            <td><strong>季度线下聚</strong></td>
+            <td>强化面对面连接，缓解岗责升级压力</td>
+            <td>每季度1次，选取标杆门店做现场参观+新岗位实操经验分享+简单聚餐。需大区负责人审批费用</td>
+            <td>策划约2小时/次</td>
+          </tr>
+          <tr>
+            <td><span class="p-tag p3">P3</span></td>
+            <td><strong>企划人才蓄水池</strong></td>
+            <td>提前防范空缺，缩短补位周期</td>
+            <td>在每个门店识别1-2名有潜力年轻人员重点培养；联动人资部门开通企划岗绿色招聘通道，结合新8岗体系明确各岗位招聘画像</td>
+            <td>半年盘点约1小时</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- 六、预期效果 -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <section class="section" id="sec6">
+    <div class="section-header">
+      <div class="section-num">六</div>
+      <div class="section-title-wrap">
+        <div class="section-title">预期效果与评估</div>
+        <div class="section-desc">6个月为周期，建立可追踪的评估体系</div>
+      </div>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>评估指标</th><th>当前状态</th><th>6个月目标</th><th>评估方式</th></tr></thead>
+        <tbody>
+          <tr class="kpi-red">
+            <td><strong>岗责解读沟通完成率</strong></td>
+            <td>未启动</td>
+            <td>4月内完成100%核心岗位</td>
+            <td>沟通台账核查</td>
+          </tr>
+          <tr class="kpi-good">
+            <td>企划人员主动离职率</td>
+            <td>偏高（已3人离职）</td>
+            <td>较当前下降50%+</td>
+            <td>人资数据跟踪</td>
+          </tr>
+          <tr class="kpi-orange">
+            <td>上级关系风险识别率</td>
+            <td>无机制，依赖员工主动暴露</td>
+            <td>季度覆盖100%核心岗位</td>
+            <td>1对1记录台账</td>
+          </tr>
+          <tr class="kpi-good">
+            <td>岗责适应焦虑比例</td>
+            <td>未测量，预计偏高</td>
+            <td>1对1反馈中焦虑比例下降</td>
+            <td>季度沟通记录</td>
+          </tr>
+          <tr class="kpi-blue">
+            <td>战报发布持续性</td>
+            <td>无</td>
+            <td>月月发布，全年12期</td>
+            <td>战报台账核查</td>
+          </tr>
+          <tr class="kpi-blue">
+            <td>企划之星新岗位覆盖率</td>
+            <td>无</td>
+            <td>12个月内8个新岗位均有获评</td>
+            <td>评选记录核查</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- 结语 -->
+  <div class="closing">
+    <div class="closing-label">核心执行原则</div>
+    <div class="closing-main">
+      第0件事先做，消除岗责焦虑；<br>三件事持续做，建立长效凝聚力。
+    </div>
+    <div class="closing-sub">
+      战报让人被看见，之星让人有荣誉，1对1让人感到被重视，岗责沟通让人心定。<br>
+      <em>每月4小时，持续12个月——1个大区企划能做到的最高性价比留人动作。</em>
+    </div>
+  </div>
+
+  </div><!-- /content -->
+</main>
+
+<script>
+// Active nav link on scroll
+const sections = document.querySelectorAll('section[id], div[id^="sec"]');
+const navLinks = document.querySelectorAll('.nav-links a');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      navLinks.forEach(a => a.classList.remove('active'));
+      const active = document.querySelector(`.nav-links a[href="#${e.target.id}"]`);
+      if (active) active.classList.add('active');
+    }
+  });
+}, { rootMargin: '-20% 0px -60% 0px' });
+sections.forEach(s => observer.observe(s));
+</script>
+</body>
+</html>
